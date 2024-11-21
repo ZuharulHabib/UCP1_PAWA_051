@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Halaman Tengah Teks</title>
+            <!-- Menghubungkan file CSS -->
+            <link rel="stylesheet" href="styles.css">
+            <!-- Menggunakan font dari Google Fonts -->
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        </head>
+    </head>
+    
+</head>
+<body>
+    <h1>Daftar Wisata Kolam Renang</h1>
+    <a href="/wisata/create">Tambah Pengunjung</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Lokasi</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% wisataList.forEach((wisata) => { %>
+                <tr>
+                    <td><%= wisata.nama %></td>
+                    <td><%= wisata.lokasi %></td>
+                    <td><%= wisata.harga %></td>
+                    <td>
+                        <a href="/wisata/edit/<%= wisata.id %>">Edit</a>
+                        <form method="POST" action="/wisata/delete/<%= wisata.id %>" style="display:inline;">
+                            <button type="submit">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

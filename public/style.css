@@ -1,0 +1,181 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menggunakan font dari Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;  /* Menggunakan font Poppins dari Google Fonts */
+    background-image: url('background.jpg');  /* Ganti dengan path gambar background yang Anda pilih */
+    background-size: cover;  /* Menutup seluruh layar dengan gambar */
+    background-position: center center;  /* Posisi gambar di tengah */
+    background-attachment: fixed;  /* Membuat gambar latar tetap saat scroll */
+    height: 100vh;  /* Mengisi seluruh tinggi layar */
+    display: flex;  /* Mengaktifkan Flexbox */
+    justify-content: center;  /* Menyusun konten secara horizontal di tengah */
+    align-items: center;  /* Menyusun konten secara vertikal di tengah */
+    text-align: center;  /* Menyusun teks agar berada di tengah */
+}
+
+/* Styling untuk teks (h1) */
+h1 {
+    font-size: 5rem;  /* Ukuran font besar */
+    color: white;  /* Warna teks putih */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 255, 0, 0.3);  /* Bayangan teks */
+    animation: fadeIn 2s ease-out;  /* Animasi fade-in untuk membuat teks muncul perlahan */
+}
+
+
+/* Atur Header */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek Hover pada Header */
+h1:hover {
+    transform: scale(1.1);  /* Membuat teks lebih besar saat hover */
+    color: #4CAF50;  /* Mengubah warna saat hover */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;  /* Ukuran font lebih kecil untuk perangkat kecil */
+    }
+}
+
+/* Teks Sub-Heading */
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #f1f1f1;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Teks Paragraf */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek untuk Tombol */
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);  /* Efek tombol terangkat */
+}
+
+/* Link dengan Efek Hover */
+a {
+    color: #4CAF50;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+    color: #2e8b57;
+    text-decoration: underline;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Tabel */
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Efek Hover pada Baris Tabel */
+tr:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsif dengan Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

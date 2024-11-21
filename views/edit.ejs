@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Wisata</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Wisata</h1>
+    <form method="POST" action="/wisata/edit/<%= wisata.id %>">
+        <input type="text" name="nama" value="<%= wisata.nama %>" required />
+        <input type="text" name="lokasi" value="<%= wisata.lokasi %>" required />
+        <input type="number" name="harga" value="<%= wisata.harga %>" required />
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Wisata</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Tambah Wisata</h1>
+    <form method="POST" action="/wisata/create">
+        <input type="text" name="nama" placeholder="Nama Wisata" required />
+        <input type="text" name="lokasi" placeholder="Lokasi Wisata" required />
+        <input type="number" name="harga" placeholder="Harga Tiket" required />
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>
